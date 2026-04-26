@@ -1,0 +1,38 @@
+{
+  "case_name": "SCOR-eSTORE.COM",
+  "description": "Software startup real-options valuation — Bernard's 1/3 stake in a venture building a browser-based 3D viewer and an e-commerce website.",
+  "ownership_share": 0.3333333333,
+  "discount_rate_annual": 0.20,
+  "probabilities": {
+    "viewer_success": 0.30,
+    "website_success": 0.50
+  },
+  "cash_flows": {
+    "initial_investment": 90000,
+    "full_success_payoff_at_18m_per_share": 500000,
+    "abandon": {
+      "gross_sale": 450000,
+      "packaging_cost": 25000,
+      "timing_months": 6
+    },
+    "switch": {
+      "web_business_sale": 300000,
+      "timing_months": 6
+    },
+    "expand": {
+      "total_investment": 450000,
+      "doubled_payoff_at_18m": 1000000,
+      "timing_months": 6
+    },
+    "sell": {
+      "control_premium_benefit": 100000,
+      "buyout_cost": 250000,
+      "timing_months": 18
+    }
+  },
+  "utility": {
+    "form": "exponential",
+    "function": "u(x) = 1 - exp(-x / risk_tolerance)",
+    "risk_tolerance": 100000
+  }
+}
