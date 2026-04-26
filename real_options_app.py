@@ -58,6 +58,52 @@ def fmt(v: float) -> str:
 st.title("Real Options Valuation Dashboard")
 st.caption("Decision-tree EMV with abandon, switch, expand, and sell options under uncertainty.")
 
+with st.expander("How to use this app", expanded=False):
+    st.markdown("""
+**What this app does in plain English.**
+A startup is deciding whether to invest in a multi-stage software
+project. There's uncertainty — the product might succeed or flop, the
+market might shift. But the company has flexibility: at each decision
+point, they can **abandon** the project, **switch** to a different
+direction, **expand** if things go well, or **sell** the IP. Each of
+these is called a "real option" (a real-world version of a financial
+option). This app puts a dollar value on each option and finds the
+combination that maximises **EMV** (Expected Monetary Value).
+
+**Quick start (30 seconds).**
+1. Check the **decision tree diagram** — it shows every path the
+   project could take, with probabilities and cash flows.
+2. The **EMV ladder** chart on the right shows what each strategy is
+   worth — taller = more valuable.
+3. Move the **probability sliders** in the sidebar to see how the
+   recommendation shifts.
+
+**The case parameters in the sidebar.**
+- **Probability of success at each stage** — if the prototype phase
+  succeeds with probability p, what's the value of continuing?
+- **Cash flows** — investment costs and payoffs at each stage.
+- **Discount rate** — to compare cash flows across years (a dollar
+  today is worth more than a dollar in 5 years).
+- **Risk aversion (utility curvature)** — for the certainty-equivalent
+  view. A risk-averse founder values $50K guaranteed more than a
+  50/50 shot at $100K — even though both have the same EMV.
+
+**What the panels mean.**
+- **Decision tree** — the full game tree of decisions and uncertainties.
+  Squares = decisions, circles = chance nodes. The number at each leaf
+  is the cash payoff if you reach that leaf.
+- **EMV ladder** — bar chart comparing every composite strategy. The
+  tallest bar is the recommendation.
+- **Sensitivity analysis** — how does the optimal strategy change as
+  the success probability varies from 30 % to 70 %? Helps you see if
+  the recommendation is robust or fragile.
+
+**Try this.** Drop the success probability of the second stage from
+0.7 down to 0.4 and watch the recommended strategy switch from
+"Expand" to "Abandon early" — that's the real-options framework
+working: more uncertainty makes the abandon option more valuable.
+""")
+
 base = base_case()
 
 with st.sidebar:
