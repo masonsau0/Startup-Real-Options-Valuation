@@ -1,5 +1,7 @@
 # Tech Startup Real Options Valuation
 
+**[Live demo](https://startup-real-options-valuation.streamlit.app)** — runs in your browser, no install required.
+
 Multi-stage investment valuation for a software startup under uncertainty. Uses
 **decision-tree analysis** and **real options** to value four managerial
 flexibility options on top of a base investment, identifies the composite
