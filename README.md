@@ -1,6 +1,6 @@
 # Tech Startup Real Options Valuation
 
-**[Live demo](https://startup-real-options-valuation.streamlit.app)** — runs in your browser, no install required.
+**[Live demo](https://mason-startup-real-options.streamlit.app/)** — runs in your browser, no install required.
 
 Multi-stage investment valuation for a software startup under uncertainty. Uses
 **decision-tree analysis** and **real options** to value four managerial
